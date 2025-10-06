@@ -1,0 +1,27 @@
+@use '../abstracts' as *;
+
+[data-component='anime-details-page'] {
+
+    .section-title-container {
+        width: 100%;
+        padding: 1rem;
+
+        .section-label {
+            font-size: 3.5rem;
+            font-weight: 700;
+            text-decoration: underline;
+            text-decoration-color: $dark_titleTxt;
+            text-underline-offset: 1rem;
+            color: white;
+        }
+
+
+    }
+
+    .stream-producer-container {
+        @include display-center(row);
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 1rem;
+    }
+}

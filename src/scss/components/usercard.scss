@@ -1,0 +1,115 @@
+@use '../abstracts' as *;
+
+[data-component='user-card-component'] {
+    padding: 1rem;
+    @include display-center(column);
+    border: 1px solid white;
+    border-radius: 8px;
+    background-color: white;
+    justify-content: flex-start;
+    align-items: normal;
+    width: 350px;
+    height: 300px;
+
+
+    .user-card-edit-contianer {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding: 1rem;
+
+        .user-card-edit-btn {
+            max-height: 3rem;
+            max-width: 6rem;
+            background-color: blue;
+            color: white;
+            border: none;
+            font-size: 1rem;
+            font-weight: 900;
+            line-height: normal;
+
+
+        }
+
+
+
+        .user-card-edit-btn-delete {
+            max-height: 3rem;
+            max-width: 6rem;
+            background-color: red;
+            color: white;
+            border: none;
+            font-size: 1rem;
+            font-weight: 900;
+            line-height: normal;
+        }
+    }
+
+    .user-card-data-contianer {
+        @include display-center(column);
+        justify-content: center;
+        place-items: center;
+        align-items: normal;
+        border: 1px solid rgb(0, 0, 0);
+
+        // width: 100%;
+        .user-card-label {
+            font-size: 1.2rem;
+            font-weight: 500;
+            line-height: normal;
+            color: rgb(63, 63, 63);
+            padding: 0.3rem;
+            border: 1px solid;
+
+            & strong {
+                font-size: 1.2rem;
+                font-weight: 700;
+                line-height: normal;
+                color: rgb(30, 30, 30);
+                margin-right: 1rem;
+            }
+        }
+    }
+
+
+
+    @include mobile_devices {
+        width: 180px;
+        height: 180px;
+
+        .user-card-edit-contianer {
+            padding: 0.5rem;
+
+            .user-card-edit-btn {
+                height: 1.3rem;
+                width: 3rem;
+                font-size: 0.6rem;
+            }
+
+            // .user-card-edit-btn-delete {
+            //     height: 1.3rem;
+            //     width: 3rem;
+            //     font-size: 0.6rem;
+            // }
+            .delete-btn {
+                background-color: red;
+
+            }
+
+        }
+
+        .user-card-data-contianer {
+            .user-card-label {
+                font-size: 0.7rem;
+                flex-wrap: nowrap;
+
+                & strong {
+                    font-size: 0.7rem;
+                    margin-right: 0px;
+                }
+            }
+
+        }
+
+    }
+}

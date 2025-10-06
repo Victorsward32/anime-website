@@ -1,0 +1,123 @@
+@use '../abstracts' as *;
+
+[data-component='anime-banner-component'] {
+    position: relative;
+    width: 100%;
+    // background-color: gray;
+    height: 70vh;
+    color: white;
+    overflow: hidden;
+
+    .banner-background-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+    }
+
+    .banner-background-overlay {
+        position: relative;
+        z-index: 2;
+        // min-height: 100vh;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 40px;
+        background-color: rgba(0, 0, 0, 0.587);
+
+        .banner-data-container {
+            display: flex;
+            gap: 40px;
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+
+            .banner-data-img {
+                width: 300px;
+                height: 450px;
+                object-fit: fill;
+                flex-shrink: 0; // used for not shrink
+
+            }
+
+            .banner-data-info-container {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                width: 100%;
+            }
+
+            .banner-data-title {
+                font-size: 3.5rem;
+                font-weight: 900;
+                margin: 0;
+                text-shadow: 2px 1.2px rgba(0, 0, 0, 0.381);
+                color: #ebebeb;
+            }
+
+            .banner-data-description {
+                font-size: 1.2rem;
+                font-weight: 400;
+                line-height: 1.9;
+                color: #ffffff;
+                max-width: 800px;
+                text-align: justify;
+                @include ellipseText(6);
+            }
+
+            .banner-details-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 32px;
+                margin-top: 20px;
+
+                .banner-details-columns {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                }
+            }
+        }
+    }
+
+    .banner-details-item-contianer {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        .banner-details-label {
+            font-size: 1.3rem;
+            color: #d3d2d2;
+            font-weight: 900;
+            text-transform: uppercase;
+            // letter-spacing: px;
+            text-shadow: 2px 0.7px black;
+
+        }
+
+        .banner-details-value {
+            font-size: 1rem;
+            color: rgb(180, 180, 180);
+            font-weight: 500;
+        }
+
+        .banner-details-genres {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+
+            .banner-details-generastag {
+                font-size: 0.9rem;
+                color: white;
+                font-weight: 500;
+            }
+        }
+    }
+
+
+}
